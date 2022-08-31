@@ -249,8 +249,14 @@ header nav a {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     text-decoration: none;
+}
+
+@media screen and (min-width: 767px) {
+  .worklist-link {
+    align-items: flex-end;
+  }
 }
 
 .worklist-link:before {

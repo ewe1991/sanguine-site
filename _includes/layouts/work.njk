@@ -5,9 +5,11 @@ templateClass: tmpl-work
 
 
 
- <video id="player" crossorigin controls autoplay playsinline muted defaultmuted poster="/img/SANGUINE_HYPE_FILM_POSTER_1.jpg">
-  <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4">
-</video>
+{% set postslist = collections.posts %}
+{% set postslistCounter = collections.posts | length %}
+{% include "worklist.njk" %}
+
+
 
 {{ content | safe }}
 

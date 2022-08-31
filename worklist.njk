@@ -1,0 +1,14 @@
+<ol reversed class="worklist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+{% for post in postslist | reverse %}
+  <li class="worklist-item{% if post.url == url %} worklist-item-active{% endif %}">
+    <a href="{{ post.url | url }}" class="worklist-link">
+    {% if post.data.title %}
+    <h2 class="worklist-title f-title txt-white b-white">{{ post.data.title }}</h2>
+    {% endif %}
+    </a>
+    {% if post.data.image %}
+    <img class="worklist-img" src="{{ post.data.image }}" alt="">
+    {% endif %}
+  </li>
+{% endfor %}
+</ol>

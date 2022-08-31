@@ -3,4 +3,22 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 
-{{ content | safe }}
+<article class="l-work">
+
+  <div class="l-work-content">
+  <h1>{{ title}}</h1>
+
+  {{ content | safe }}
+
+  </div>
+  <div class="l-work-media">
+    <div class="l-work-imgs">
+    <div style="background: red;"></div>
+    <div style="background: pink;"></div>
+    </div>
+    <div class="l-work-video" style="background: blue;"></div>
+  </div>
+
+</article>
+
+

@@ -315,6 +315,9 @@ header nav a {
 
 /* Work */
 
+.l-work details {
+  margin-bottom: 2rem;
+}
 
 .l-work-content {
   padding: 90px 2vw 10vw;
@@ -351,7 +354,6 @@ header nav a {
   .l-work {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
-
   }
 
   .l-work-content {

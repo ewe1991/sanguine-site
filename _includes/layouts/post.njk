@@ -1,14 +1,28 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-work
+templateClass: tmpl-work-single
 ---
 
 <article class="l-work">
 
   <div class="l-work-content">
-  <h1>{{ title}}</h1>
+  <h1 class="f-h3 f-subtitle">{{ title}}</h1>
 
   {{ content | safe }}
+
+
+  <ol class="c-pagination mt-auto">
+    {% set prev = prevPost.url %}
+    {% set next = nextPost.url %}
+    {% if prev %}
+    <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
+    {% endif %}
+    {% if next %}
+    <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
+    {% endif %}
+  </ol>
+
+
 
   </div>
   <div class="l-work-media">

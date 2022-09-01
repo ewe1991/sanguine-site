@@ -198,6 +198,7 @@ header nav a {
   }
 }
 
+.tmpl-home-alt header,
 .tmpl-work header,
 .tmpl-work-single header {
   position: absolute;
@@ -229,6 +230,14 @@ header nav a {
 
 /* .c-page p { margin-top: 0; } */
 
+/* Home alt */
+
+.tmpl-home-alt video {
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+  height: 100vh;
+}
 
 /* Work List */
 

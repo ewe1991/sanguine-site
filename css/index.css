@@ -7,10 +7,9 @@ html {
   box-sizing: inherit;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:400");
 :root {
   --plyr-color-main: rgb(166, 22, 22);
-  --font-family: "Poppins", system-ui;
+  --font-family: "Inter", sans-serif;
   --font-family-title: "Oswald", sans-serif;
 }
 
@@ -25,6 +24,7 @@ body {
   background: -webkit-linear-gradient(top left, #A61616, #6D0C0D);
   background: -moz-linear-gradient(top left, #A61616, #6D0C0D);
   background: linear-gradient(to bottom right, #A61616, #6D0C0D);
+  font-weight: 300;
 }
 /* .tmpl-work {
   background: black;
@@ -130,6 +130,10 @@ svg {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .txt-white {
   color: white;
 }
@@ -188,6 +192,7 @@ header nav a {
   letter-spacing: 0.025rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 767px) {
@@ -282,6 +287,9 @@ header nav a {
     text-decoration: none;
 }
 
+.worklist-link:hover:before {
+  background-color: hsl(0deg 0% 0% / 5%);
+}
 @media screen and (min-width: 767px) {
   .worklist-link {
     align-items: flex-end;
@@ -295,10 +303,11 @@ header nav a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: hsl(0deg 0% 0% / 20%);
+  background-color: hsl(0deg 0% 0% / 25%);
   width: 100%;
   height: 100%;
   z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .worklist-title {
@@ -335,9 +344,27 @@ header nav a {
   display: flex;
   flex-direction: row;
 }
-.l-work-imgs  div {
+.l-work-media .l-work-imgs a {
   width: 50%;
   aspect-ratio: 1 / 1 ;
+}
+
+.l-work-media img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.l-work-media a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 .l-work-video {
   width: 100%;
@@ -363,7 +390,7 @@ header nav a {
     padding-bottom: 30px;
   }
 
-  .l-work-imgs  div {
+  .l-work-media .l-work-imgs a {
     width: 50%;
     min-height: 50vh;
     aspect-ratio: auto;
@@ -383,6 +410,9 @@ header nav a {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
+    letter-spacing: 0.025rem;
+    font-weight: 500;
 }
 
 /* controls */
@@ -441,3 +471,6 @@ header nav a {
 .controls button {
   background-position:center center;
 }
+
+
+

@@ -1,4 +1,16 @@
 (function () {
+  var gallery = document.getElementById('l-work-gallery');
+
+  if(gallery) {
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true
+  });
+  }
+
+})();
+(function () {
 
 	// Does the browser actually support the video element?
 	var supportsVideo = !!document.createElement('video').canPlayType;

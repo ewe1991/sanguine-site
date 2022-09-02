@@ -279,6 +279,12 @@ header nav a {
   position: relative;
 }
 
+.worklist-item svg {
+  color: white;
+  max-width: 55%;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 767px) {
   .worklist-item {
     min-width: 50vw;
@@ -306,7 +312,7 @@ header nav a {
 }
 @media screen and (min-width: 767px) {
   .worklist-link {
-    align-items: flex-end;
+    /* align-items: flex-end; */
   }
 }
 
@@ -321,7 +327,7 @@ header nav a {
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .worklist-title {

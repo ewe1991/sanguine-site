@@ -2,7 +2,8 @@
 {% for post in postslist | reverse %}
   <li class="worklist-item{% if post.url == url %} worklist-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="worklist-link" aria-label="{{ post.data.title }}">
-    {% include "./_includes/logo.svg" %}
+    {% set logo = post.data.logo %}
+    <img class="worklist-logo" src="{{ logo }}" alt="">
     </a>
     {% if post.data.image %}
     <img class="worklist-img" src="{{ post.data.image }}" alt="">

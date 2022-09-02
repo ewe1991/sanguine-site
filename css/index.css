@@ -279,10 +279,11 @@ header nav a {
   position: relative;
 }
 
-.worklist-item svg {
+.worklist-logo {
   color: white;
   max-width: 55%;
   margin: 0 auto;
+  height: auto;
 }
 
 @media screen and (min-width: 767px) {

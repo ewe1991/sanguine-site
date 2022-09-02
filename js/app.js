@@ -11,6 +11,27 @@
 
 })();
 (function () {
+  var intro = document.getElementById('work-content-intro');
+  var more = document.getElementById('work-content-more');
+  var btn = document.getElementById('work-btn-more');
+
+  if(btn) {
+
+    gsap.set(more, { autoAlpha: 0, display:"none"});
+
+    btn.addEventListener("click", () => {
+
+      const tl = gsap.timeline()
+      .to([intro, btn], { autoAlpha: 0, display:"none",  duration:0.5})
+      .to(more, { autoAlpha: 1, delay:0.2, display:"block", duration:0.5});
+
+      tl.play();
+
+    });
+  }
+
+})();
+(function () {
 
 	// Does the browser actually support the video element?
 	var supportsVideo = !!document.createElement('video').canPlayType;

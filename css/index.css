@@ -23,10 +23,12 @@ body {
 body {
   font-family: var(--font-family);
   background: #A61616;
-  background: -webkit-linear-gradient(top left, #A61616, #6D0C0D);
-  background: -moz-linear-gradient(top left, #A61616, #6D0C0D);
-  background: linear-gradient(to bottom right, #A61616, #6D0C0D);
+  background: -webkit-linear-gradient(top left, #6D0C0D, #A61616);
+  background: -moz-linear-gradient(top left, #6D0C0D, #A61616);
+  background: linear-gradient(to bottom right, #6D0C0D, #A61616);
   font-weight: 300;
+  line-height: 1.75;
+  color: #000000;
 }
 /* .tmpl-work {
   background: black;
@@ -36,13 +38,6 @@ html {
   font-size: 100%;
 }
 
-/*16px*/
-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  color: #000000;
-}
 
 p {
   margin-bottom: 1rem;
@@ -83,6 +78,10 @@ h6, .f-h6 {
 
 p {
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem); /* 16-20 320-1920 */
+}
+
+.c-btn, .c-pagination {
+  font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
 }
 
 
@@ -128,6 +127,7 @@ video {
   object-fit: contain;
   width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 svg {
@@ -173,7 +173,7 @@ header {
   display: flex;
   align-items: center;
   padding: 2vw;
-
+  padding: clamp(1rem, 2vw, 2rem);
   flex-direction: row;
   justify-content: space-between;
 }
@@ -516,4 +516,5 @@ header nav a {
 
 .gslide-media.gslide-video {
   max-width: 90vw !important;
+  margin: 0 auto;
 }

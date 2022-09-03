@@ -23,7 +23,7 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body {% if templateClass %} class="{{ templateClass }}"{% endif %}>
-    <header>
+    <header id="site-header">
 
       <a href="{{ '/' | url }}" class="site-brand">
       {% include "../logo.svg" %}

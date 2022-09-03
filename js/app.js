@@ -1,4 +1,16 @@
 (function () {
+  const header = document.getElementById('site-header');
+  let root = document.documentElement;
+
+  if(header) {
+
+    document.addEventListener("resize", () => {
+      root.style.setProperty('--site-header-height', header.offsetHeight + "px");
+    });
+  }
+
+})();
+(function () {
   var gallery = document.getElementById('l-work-gallery');
 
   if(gallery) {
@@ -43,7 +55,7 @@
 		var videoControls = document.getElementById('video-controls');
 
 		// Hide the default controls
-		video.controls = true;
+		video.controls = false;
 
 		// Display the user defined video controls
 		videoControls.setAttribute('data-state', 'visible');

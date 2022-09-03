@@ -435,10 +435,11 @@ header nav a {
     aspect-ratio: auto;
   }
 
-  .l-work-video {
+  a.l-work-video {
     width: 100%;
     min-height: 50vh;
     aspect-ratio: auto;
+    height: auto;
   }
 
 }

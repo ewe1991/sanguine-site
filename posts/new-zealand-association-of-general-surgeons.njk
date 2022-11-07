@@ -3,12 +3,21 @@ title: New Zealand Association of General Surgeons
 description: We were engaged by the New Zealand Association of General Surgeons to promote their 2022 conference ‘Synergy in Surgery’.
 image: "/img/work/work_03.jpg"
 logo: "/img/work/logo_nzags.png"
+image_01: "/img/work/leukaemia-uk/img-01.jpg"
+image_01_xl: "/img/work/leukaemia-uk/img-01-xl.jpg"
+image_02: "/img/work/leukaemia-uk/img-02.jpg"
+image_02_xl: "/img/work/leukaemia-uk/img-02-xl.jpg"
+image_03: "/img/work/leukaemia-uk/img-03.jpg"
+video_03: "https://www.youtube.com/watch?v=UMRTMKVvYhQ"
 date: 2018-08-24
 tags:
   - second tag
   - posts with two tags
 layout: layouts/post.njk
 ---
+
+<div class="l-work-content">
+
 
 <div id="work-content-intro" class="">
   <h1 class="f-h3 f-subtitle">{{ title }}</h1>
@@ -20,3 +29,33 @@ layout: layouts/post.njk
 <div id="work-content-more" class="">
   <p>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
 </div>
+
+
+
+  <ol class="c-pagination mt-auto">
+    {% set prev = prevPost.url %}
+    {% set next = nextPost.url %}
+    {% if prev %}
+    <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
+    {% endif %}
+    {% if next %}
+    <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
+    {% endif %}
+  </ol>
+
+  </div>
+  
+  <div class="l-work-media" id="l-work-gallery">
+    <div class="l-work-imgs">
+      <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
+        <img src="{{ image_01 }}" alt="">
+      </a>
+      <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
+        <img src="{{ image_02 }}" alt="">
+      </a>
+    </div>
+    <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
+      <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
+      <img src="{{ image_03 }}" alt="image" />
+    </a>
+  </div>

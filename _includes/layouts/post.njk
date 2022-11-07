@@ -5,38 +5,7 @@ templateClass: tmpl-work-single
 
 <article class="l-work">
 
-  <div class="l-work-content">
-
   {{ content | safe }}
-
-
-  <ol class="c-pagination mt-auto">
-    {% set prev = prevPost.url %}
-    {% set next = nextPost.url %}
-    {% if prev %}
-    <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
-    {% endif %}
-    {% if next %}
-    <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
-    {% endif %}
-  </ol>
-
-
-
-  </div>
-  <div class="l-work-media" id="l-work-gallery">
-    <div class="l-work-imgs">
-      <a href="/img/SANGUINE_HYPE_FILM_POSTER_1.jpg" class="glightbox" data-gallery="gallery">
-        <img src="/img/SANGUINE_HYPE_FILM_POSTER_1.jpg" alt="">
-      </a>
-      <a href="/img/SANGUINE_HYPE_FILM_POSTER_1.jpg" class="glightbox" data-gallery="gallery">
-        <img src="/img/SANGUINE_HYPE_FILM_POSTER_1.jpg" alt="">
-      </a>
-    </div>
-    <a class="l-work-video glightbox" href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
-      <img src="/img/SANGUINE_HYPE_FILM_POSTER_1.jpg" alt="image" />
-    </a>
-  </div>
 
 </article>
 

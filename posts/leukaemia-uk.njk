@@ -3,25 +3,62 @@ title: Leukaemia UK
 description: Britain’s two largest leukaemia organisations, Leukaemia U.K and Leukaemia Care, called on us to deliver their campaign for Blood Cancer Awareness Month, raising awareness of the 3 key symptoms of leukaemia.
 image: "/img/work/work_02.jpg"
 logo: "/img/work/logo_leukaemia-uk.svg"
+image_01: "/img/work/leukaemia-uk/img-01.jpg"
+image_01_xl: "/img/work/leukaemia-uk/img-01-xl.jpg"
+image_02: "/img/work/leukaemia-uk/img-02.jpg"
+image_02_xl: "/img/work/leukaemia-uk/img-02-xl.jpg"
+image_03: "/img/work/leukaemia-uk/img-03.jpg"
+video_03: "/img/work/leukaemia-uk/video-03.mp4"
 date: 2018-07-04
 tags:
   - number 2
 layout: layouts/post.njk
 ---
 
-<div id="work-content-intro" class="">
-  <h1 class="f-h3 f-subtitle">{{ title }}</h1>
 
-  <p>Britain’s two largest leukaemia organisations, Leukaemia U.K and Leukaemia Care, called on us to deliver their campaign for Blood Cancer Awareness Month, raising awareness of the 3 key symptoms of leukaemia.</p>
+<div class="l-work-content">
 
-  <p>With Covid symptoms ingrained on everyone’s minds, a radical advertising approach would be required to divert attention to a completely new set of serious symptoms. Brave and colourful, our campaign centred around a blue-and-gold macaw creating a piece of music to make the symptoms memorable.</p>
 
-  <p>The campaign generated 10 million impressions and provoked a 12% increase in leukaemia enquiries via the NHS.</p>
+  <div id="work-content-intro" class="">
+    <h1 class="f-h3 f-subtitle">{{ title }}</h1>
 
-</div>
+    <p>Britain’s two largest leukaemia organisations, Leukaemia U.K and Leukaemia Care, called on us to deliver their campaign for Blood Cancer Awareness Month, raising awareness of the 3 key symptoms of leukaemia.</p>
 
-<button id="work-btn-more" class="c-btn">Read More</button>
 
-<div id="work-content-more" class="">
-  <p>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
-</div>
+  </div>
+
+  <button id="work-btn-more" class="c-btn">Read More</button>
+
+  <div id="work-content-more" class="">
+    <p>With Covid symptoms ingrained on everyone’s minds, a radical advertising approach would be required to divert attention to a completely new set of serious symptoms. Brave and colourful, our campaign centred around a blue-and-gold macaw creating a piece of music to make the symptoms memorable.</p>
+    <p>The campaign generated 10 million impressions and provoked a 12% increase in leukaemia enquiries via the NHS.</p>
+  </div>
+
+
+  <ol class="c-pagination mt-auto">
+    {% set prev = prevPost.url %}
+    {% set next = nextPost.url %}
+    {% if prev %}
+    <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
+    {% endif %}
+    {% if next %}
+    <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
+    {% endif %}
+  </ol>
+
+  </div>
+  
+  <div class="l-work-media" id="l-work-gallery">
+    <div class="l-work-imgs">
+      <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
+        <img src="{{ image_01 }}" alt="">
+      </a>
+      <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
+        <img src="{{ image_02 }}" alt="">
+      </a>
+    </div>
+    <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
+      <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
+      <img src="{{ image_03 }}" alt="image" />
+    </a>
+  </div>

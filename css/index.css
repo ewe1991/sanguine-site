@@ -309,6 +309,9 @@ header nav a {
   max-width: 55%;
   margin: 0 auto;
   height: auto;
+  max-height: 7rem;
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (min-width: 767px) {
@@ -461,11 +464,14 @@ header nav a {
     aspect-ratio: auto;
   }
 
-  a.l-work-video {
+  .l-work-video {
+    min-height: 50vh !important;
+    aspect-ratio: auto !important;
+    height: auto !important;
+    display: block;
     width: 100%;
-    min-height: 50vh;
-    aspect-ratio: auto;
-    height: auto;
+    height: 100%;
+    position: relative;
   }
 
 }

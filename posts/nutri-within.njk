@@ -1,0 +1,63 @@
+---
+title: Nutri Within
+description: Britain’s two largest leukaemia organisations, Leukaemia U.K and Leukaemia Care, called on us to deliver their campaign for Blood Cancer Awareness Month, raising awareness of the 3 key symptoms of leukaemia.
+image: "/img/work/work_04.jpg"
+logo: "/img/work/logo_nutri-within-logo.svg"
+image_01: "/img/work/nutri-within/img-01.jpg"
+image_01_xl: "/img/work/nutri-within/img-01-xl.jpg"
+image_02: "/img/work/nutri-within/img-02.jpg"
+image_02_xl: "/img/work/nutri-within/img-02-xl.jpg"
+image_03: "/img/work/nutri-within/img-03.jpg"
+image_03_xl: "/img/work/nutri-within/img-03-xl.jpg"
+date: 2022-07-04
+tags:
+  - number 2
+layout: layouts/post.njk
+---
+
+
+<div class="l-work-content">
+
+
+  <div id="work-content-intro" class="">
+    <h1 class="f-h3 f-subtitle">{{ title }}</h1>
+
+    <p>Britain’s two largest leukaemia organisations, Leukaemia U.K and Leukaemia Care, called on us to deliver their campaign for Blood Cancer Awareness Month, raising awareness of the 3 key symptoms of leukaemia.</p>
+
+
+  </div>
+
+  <button id="work-btn-more" class="c-btn">Read More</button>
+
+  <div id="work-content-more" class="">
+    <p>With Covid symptoms ingrained on everyone’s minds, a radical advertising approach would be required to divert attention to a completely new set of serious symptoms. Brave and colourful, our campaign centred around a blue-and-gold macaw creating a piece of music to make the symptoms memorable.</p>
+    <p>The campaign generated 10 million impressions and provoked a 12% increase in leukaemia enquiries via the NHS.</p>
+  </div>
+
+
+  <ol class="c-pagination mt-auto">
+    {% set prev = prevPost.url %}
+    {% set next = nextPost.url %}
+    {% if prev %}
+    <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
+    {% endif %}
+    {% if next %}
+    <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
+    {% endif %}
+  </ol>
+
+  </div>
+  
+  <div class="l-work-media" id="l-work-gallery">
+    <div class="l-work-imgs">
+      <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
+        <img src="{{ image_01 }}" alt="">
+      </a>
+      <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
+        <img src="{{ image_02 }}" alt="">
+      </a>
+    </div>
+    <a class="l-work-video glightbox" href="{{ image_03_xl }}" data-gallery="gallery">
+      <img src="{{ image_03 }}" alt="image" />
+    </a>
+  </div>

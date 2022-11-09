@@ -20,32 +20,27 @@ layout: layouts/post.njk
 
 
   <div id="work-content-intro" class="">
-    <h1 class="f-h3 f-subtitle">{{ title }}</h1>
-
-    <p>Britain’s two largest leukaemia organisations, Leukaemia U.K and Leukaemia Care, called on us to deliver their campaign for Blood Cancer Awareness Month, raising awareness of the 3 key symptoms of leukaemia.</p>
-
-
-  </div>
-
-  <button id="work-btn-more" class="c-btn">Read More</button>
-
-  <div id="work-content-more" class="">
-    <p>With Covid symptoms ingrained on everyone’s minds, a radical advertising approach would be required to divert attention to a completely new set of serious symptoms. Brave and colourful, our campaign centred around a blue-and-gold macaw creating a piece of music to make the symptoms memorable.</p>
-    <p>The campaign generated 10 million impressions and provoked a 12% increase in leukaemia enquiries via the NHS.</p>
+    <div class="max-w-text">
+      <h1 class="f-h3 f-subtitle">{{ title }}</h1>
+      <p>British pharmacy chain LloydsPharmacy engaged us to launch their new multivitamin range NutriWithin. To make NutriWithin stand out in an often pretentious and overcomplicated category, we positioned the brand as no-nonsense, summed up in the refreshingly honest and non-threatening strapline: ‘Just what you need’. The campaign came to life across social media, outdoor and online.</p>
+    </div>
   </div>
 
 
-  <ol class="c-pagination mt-auto">
+<ol class="c-pagination mt-auto">
     {% set prev = prevPost.url %}
     {% set next = nextPost.url %}
     {% if prev %}
     <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
+     {% else %}
+    <li class=""></li>
     {% endif %}
     {% if next %}
     <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
+    {% else %}
+    <li class=""></li>
     {% endif %}
   </ol>
-
   </div>
   
   <div class="l-work-media" id="l-work-gallery">
@@ -58,6 +53,6 @@ layout: layouts/post.njk
       </a>
     </div>
     <a class="l-work-video glightbox" href="{{ image_03_xl }}" data-gallery="gallery">
-      <img src="{{ image_03 }}" alt="image" />
+      <img src="{{ image_03 }}" alt="" />
     </a>
   </div>

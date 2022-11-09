@@ -20,8 +20,10 @@ layout: layouts/post.njk
 
 
 <div id="work-content-intro" class="">
-  <h1 class="f-h3 f-subtitle">{{ title }}</h1>
-  <p>We were engaged by the New Zealand Association of General Surgeons to promote their 2022 conference ‘Synergy in Surgery’. As the subject of the conference was emerging technologies, we created a a digital campaign that asked surgeons a pointed and ineludible question: Could AI cut you out of surgery? The campaign launched with an online banner in which a simulated artificially intelligent surgeon appeared to be second away from operating on her first patient. The campaign attracted an additional guest speaker and resulted in a record number of registrations. </p>
+  <div class="max-w-text">
+    <h1 class="f-h3 f-subtitle">{{ title }}</h1>
+    <p>We were engaged by the New Zealand Association of General Surgeons to promote their 2022 conference ‘Synergy in Surgery’. As the subject of the conference was emerging technologies, we created a a digital campaign that asked surgeons a pointed and ineludible question: Could AI cut you out of surgery? The campaign launched with an online banner in which a simulated artificially intelligent surgeon appeared to be second away from operating on her first patient. The campaign attracted an additional guest speaker and resulted in a record number of registrations. </p>
+  </div>
 </div>
 
 <button id="work-btn-more" class="c-btn">Read More</button>
@@ -32,14 +34,18 @@ layout: layouts/post.njk
 
 
 
-  <ol class="c-pagination mt-auto">
+<ol class="c-pagination mt-auto">
     {% set prev = prevPost.url %}
     {% set next = nextPost.url %}
     {% if prev %}
     <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
+     {% else %}
+    <li class=""></li>
     {% endif %}
     {% if next %}
     <li><a href="{{ nextPost.url }}" aria-label="View {{ nextPost.data.title }}">Next</a></li>
+    {% else %}
+    <li class=""></li>
     {% endif %}
   </ol>
 

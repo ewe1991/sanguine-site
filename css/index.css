@@ -26,10 +26,6 @@ body {
 
 body {
   font-family: var(--font-family);
-  background: #A61616;
-  background: -webkit-linear-gradient(top left, #6D0C0D, #A61616);
-  background: -moz-linear-gradient(top left, #6D0C0D, #A61616);
-  background: linear-gradient(to bottom right, #6D0C0D, #A61616);
   font-weight: 300;
   line-height: 1.75;
   color: #000000;
@@ -38,6 +34,33 @@ body {
 /* .tmpl-work {
   background: black;
 } */
+
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+		clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
 
 .tmpl-work-single {
   background: white;
@@ -86,11 +109,12 @@ h6, .f-h6 {
 }
 
 p {
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem); /* 16-20 320-1920 */
+  font-size:clamp(0.875rem, 0.807rem + 0.34vw, 1.063rem); /* 16-20 320-1920 */
 }
 
 .c-btn, .c-pagination {
   font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  font-family: var(--font-family-title);
 }
 
 
@@ -176,7 +200,7 @@ a {
   cursor: pointer;
 }
 
-header {
+.site-header {
   color: white;
   display: flex;
   align-items: center;
@@ -186,12 +210,17 @@ header {
   justify-content: space-between;
 }
 
+.s-header--light .site-header .site-brand svg path{
+  fill: white;  
+}
+
+
 .site-brand {
   display: block;
   max-width: 8rem;
   line-height: 0;
 }
-header h1 {
+.site-header h1 {
   margin: 0;
   padding: 0.5rem;
   font-size: clamp(1.125rem, 0.807rem + 1.59vw, 2rem);
@@ -204,16 +233,16 @@ header h1 {
 .site-brand {
   color: white;
 }
-header h1 a {
+.site-header h1 a {
   color: white;
   text-decoration: none;
 }
-header nav {
+.site-header nav {
   padding-top: 1.5vw;
   padding-bottom: 1.5vw;
 }
-header nav a {
-  color: white;
+.site-header nav a {
+  color: black;
   font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -222,17 +251,31 @@ header nav a {
   font-weight: 500;
 }
 
+.site-header nav a.nav-item-active {
+  text-decoration:underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+.s-nav--dark .site-header nav a {
+  color: black;
+} 
+
+.s-nav--light .site-header nav a {
+  color: white;
+} 
+
 @media screen and (min-width: 767px) {
 
-  header {
+  hea.site-headerder {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
-.tmpl-home-alt header,
-.tmpl-work header,
-.tmpl-work-single header {
+.tmpl-home-alt .site-header,
+.tmpl-work .site-header,
+.tmpl-work-single .site-header {
   position: absolute;
   top: 0;
   left:0;
@@ -260,19 +303,6 @@ header nav a {
   margin-right: auto;
   margin-bottom: 4rem;
 }
-
-/* @media screen and (min-width: 1024px) {
-  .tmpl-manifesto .c-page {
-    max-width: calc(100% - 4rem);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    min-height: 100vh;
-  }
-} */
-
-/* .c-page p { margin-top: 0; } */
 
 /* Home alt */
 

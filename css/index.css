@@ -275,7 +275,7 @@ a {
 
 .site-brand {
   display: block;
-  max-width: 8rem;
+  max-width: 10rem;
   line-height: 0;
 }
 .site-brand svg {

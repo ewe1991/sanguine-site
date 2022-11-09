@@ -32,9 +32,14 @@
         {% include "../sanguine_logo_colour.svg" %}
         </a>
 
-        <button class="c-btn-menu relative z-8 w-24 h-24 | md.hidden" data-disclosure aria-controls="js-site-nav" aria-expanded="false" hidden aria-label="Toggle Menu">
+        <button id="js-c-btn-menu__open" class="c-btn-menu relative z-8 w-24 h-24 | md.hidden" aria-controls="js-site-nav" aria-label="Open Menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" >
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </button>
+        <button id="js-c-btn-menu__close" class="c-btn-menu relative z-8 w-24 h-24 | md.hidden" aria-controls="js-site-nav" hidden aria-label="Close Menu">
+          <svg width="24" height="24" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/>
           </svg>
         </button>
       
@@ -50,13 +55,11 @@
     </header>
 
     <main>
-
-
       {{ content | safe }}
     </main>
     
 
-    <!-- Current page: {{ page.url | url }} -->
+    <!-- Current page: {{ page.url | url }} -->    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js" integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="{{ '/js/vendors.js' | url }}"></script>

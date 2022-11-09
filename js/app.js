@@ -8,6 +8,7 @@ if(!workSlider) return;
 const swiper = new Swiper('.js-swiper--default', {
   // Optional parameters
   loop: true,
+  cssMode: true,
 
   // If we need pagination
   pagination: {
@@ -174,8 +175,7 @@ const swiper = new Swiper('.js-swiper--default', {
 
       // Add event listeners for video specific events
       video.addEventListener( 'play', function ()
-      {
-        console.log( 'Play' );
+      {        
         changeButtonState( 'playpause' );
       }, false );
       video.addEventListener( 'pause', function ()
@@ -224,6 +224,83 @@ disclosures.forEach(function (disclosure) {
 
 });
 
+let siteNavTimeline;
+
+function menu() {
+    const siteNavBtnOpen = document.getElementById('js-c-btn-menu__open');
+    const siteNavBtnClose = document.getElementById('js-c-btn-menu__close');
+  
+    const siteNav = document.getElementById("js-site-nav");
+    const navItems = document.querySelectorAll("#js-site-nav nav a");
+    let mql = window.matchMedia('(min-width: 1024px)');
+    let open = false;
+    
+
+    siteNavTimeline = new gsap.timeline({
+      paused: true,
+      onComplete: () => {
+        open = !open;        
+      },
+    }),
+  
+    siteNavTimeline.to(
+      siteNav,
+      1,
+      {
+        autoAlpha: 1,
+        ease: "power4.out"
+      },
+      "start"
+    )
+    .staggerFromTo(
+      navItems,
+      0.4,
+      {
+        x: -30,
+        autoAlpha: 0
+      },
+      {
+        x: 0,
+        autoAlpha: 1,
+        delay: 0.35,
+        ease: "back.out(1)"
+      },
+      0.15,
+      "start"
+    );
+
+    siteNavBtnOpen.addEventListener('click', (event) => {
+      siteNavTimeline.play();
+
+      document.body.classList.add('s-menu-open'); 
+      siteNavBtnOpen.setAttribute('hidden', '');
+      siteNavBtnClose.removeAttribute('hidden');
+    });
+
+    siteNavBtnClose.addEventListener('click', (event) => {    
+      siteNavTimeline.timeScale(1.25);
+      siteNavTimeline.reverse();
+
+      document.body.classList.remove('s-menu-open');        
+      siteNavBtnOpen.removeAttribute('hidden');
+      siteNavBtnClose.setAttribute('hidden', '');
+
+    });
+
+  mql.addEventListener('change', event => {
+    if (event.matches) {
+      gsap.set(siteNav, {clearProps: true})
+      gsap.set(navItems, {clearProps: true})
+    } else {
+      gsap.set(navItems, {x: -30, autoAlpha: 0})
+    }
+  })    
+    
+
+}
+menu();
+
+
 // Toggle content on click
 document.addEventListener('click', function (event) {
 
@@ -234,30 +311,25 @@ document.addEventListener('click', function (event) {
 	// Get the content to toggle
 	// If no matching content is found, end the function with return
 	var content = document.querySelector('#' + event.target.getAttribute('aria-controls'));
-	if (!content) return;
+
+  
+	if (!content || !event.target.classList.contains('c-btn-menu')) return;
 
 	// If the content is visible, hide it
 	// Otherwise, show it
 	if (event.target.getAttribute('aria-expanded') === 'true') {
 
-    if(event.target.classList.contains('c-btn-menu')) {
-      document.body.classList.remove('s-menu-open');
-    }
-		event.target.setAttribute('aria-expanded', false);
-		content.setAttribute('hidden', '');
-    content.classList.remove('s-active');
-
-
+      event.target.setAttribute('aria-expanded', false);
+      content.setAttribute('hidden', '');
+      content.classList.remove('s-active');
+	
 	} else {
 
-    if(event.target.classList.contains('c-btn-menu')) {
-      document.body.classList.add('s-menu-open');
-    }
-    
-		event.target.setAttribute('aria-expanded', true);
-		content.removeAttribute('hidden');
-    content.classList.add('s-active');
-	}
+      event.target.setAttribute('aria-expanded', true);
+      content.removeAttribute('hidden');
+      content.classList.add('s-active');      
+  }
+    		
 
 });
 

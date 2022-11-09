@@ -9,7 +9,7 @@ html {
 }
 
 :root {
-  --plyr-color-main: rgb(166, 22, 22);
+  --plyr-color-main: black;
   --font-family: "Inter", sans-serif;
   --font-family-title: "Oswald", sans-serif;
   --swiper-theme-color: white;
@@ -506,6 +506,12 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+.l-work-imgs--stacked {
+  flex-direction: column;
+}
+
+
 .l-work-media .l-work-imgs a {
   width: 50%;
   aspect-ratio: 1 / 1 ;
@@ -541,7 +547,6 @@ a {
 
 .l-work-video:hover .l-work-video__play,
 .l-work-video:focus .l-work-video__play {
- color:rgb(166, 22, 22);
   transform:scale(1.5);
 }
 
@@ -592,6 +597,12 @@ a {
     aspect-ratio: auto;
   }
 
+  .l-work-media .l-work-imgs--stacked a {
+    width: 100%;
+    min-height: 25vh;
+    aspect-ratio: auto;
+  }
+
   .l-work-slider {
      min-height: 50vh;
      aspect-ratio: auto;
@@ -601,6 +612,7 @@ a {
     width: 50vw;
     height: auto;
   }
+
 
   .swiper--default .swiper-slide {
     min-height: 50vh;

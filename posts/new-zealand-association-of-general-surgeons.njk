@@ -16,25 +16,22 @@ tags:
 layout: layouts/post.njk
 ---
 
-<div class="l-work-content">
+<section class="l-work-content">
 
-
-<div id="work-content-intro" class="">
-  <div class="max-w-text">
-    <h1 class="f-h3 f-subtitle">{{ title }}</h1>
-    <p>We were engaged by the New Zealand Association of General Surgeons to promote their 2022 conference ‘Synergy in Surgery’. As the subject of the conference was emerging technologies, we created a a digital campaign that asked surgeons a pointed and ineludible question: Could AI cut you out of surgery? The campaign launched with an online banner in which a simulated artificially intelligent surgeon appeared to be second away from operating on her first patient. The campaign attracted an additional guest speaker and resulted in a record number of registrations. </p>
+  <div id="work-content-intro" class="">
+    <div class="max-w-text">
+      <h1 class="f-h3 f-subtitle">{{ title }}</h1>
+      <p>We were engaged by the New Zealand Association of General Surgeons to promote their 2022 conference ‘Synergy in Surgery’. As the subject of the conference was emerging technologies, we created a a digital campaign that asked surgeons a pointed and ineludible question: Could AI cut you out of surgery? The campaign launched with an online banner in which a simulated artificially intelligent surgeon appeared to be second away from operating on her first patient. The campaign attracted an additional guest speaker and resulted in a record number of registrations. </p>
+    </div>
   </div>
-</div>
 
-<button id="work-btn-more" class="c-btn">Read More</button>
+  <button id="work-btn-more" class="c-btn">Read More</button>
 
-<div id="work-content-more" class="">
-  <p>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
-</div>
+  <div id="work-content-more" class="">
+    <p>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+  </div>
 
-
-
-<ol class="c-pagination mt-auto">
+  <ol class="c-pagination mt-auto">
     {% set prev = prevPost.url %}
     {% set next = nextPost.url %}
     {% if prev %}
@@ -49,19 +46,19 @@ layout: layouts/post.njk
     {% endif %}
   </ol>
 
-  </div>
+</section>
   
-  <div class="l-work-media" id="l-work-gallery">
-    <div class="l-work-imgs">
-      <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
-        <img src="{{ image_01 }}" alt="">
-      </a>
-      <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
-        <img src="{{ image_02 }}" alt="">
-      </a>
-    </div>
-    <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
-      <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
-      <img src="{{ image_03 }}" alt="image" />
+<aside class="l-work-media" id="l-work-gallery">
+  <div class="l-work-imgs">
+    <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
+      <img src="{{ image_01 }}" alt="">
+    </a>
+    <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
+      <img src="{{ image_02 }}" alt="">
     </a>
   </div>
+  <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
+    <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
+    <img src="{{ image_03 }}" alt="image" />
+  </a>
+</aside>

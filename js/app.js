@@ -1,5 +1,30 @@
 ( function ()
 {
+
+const workSlider = document.querySelector( '.js-swiper--default' );
+
+if(!workSlider) return;
+
+const swiper = new Swiper('.js-swiper--default', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+} )();
+
+( function ()
+{
   const header = document.getElementById( 'site-header' );
   let root = document.documentElement;
 

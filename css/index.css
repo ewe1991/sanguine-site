@@ -11,7 +11,18 @@ html {
   --plyr-color-main: rgb(166, 22, 22);
   --font-family: "Inter", sans-serif;
   --font-family-title: "Oswald", sans-serif;
-
+  --swiper-theme-color: white;
+  --swiper-pagination-color: var(--swiper-theme-color);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;  
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-color: var(--swiper-theme-color);
   --site-header-height: 0px;
 }
 
@@ -453,6 +464,11 @@ a {
   /* min-height: 50vh; */
 }
 
+.swiper--default .swiper-slide {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 .l-work-video:hover .l-work-video__play,
 .l-work-video:focus .l-work-video__play {
  color:rgb(166, 22, 22);
@@ -469,6 +485,18 @@ a {
     color: white;
     transition: all 0.6s ease-in-out;
 }
+
+/* Slider */ 
+.l-work-slider {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.swiper--work  {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 767px) {
   .l-work-content {
     padding-left: 2rem;
@@ -490,6 +518,21 @@ a {
 
   .l-work-media .l-work-imgs a {
     width: 50%;
+    min-height: 50vh;
+    aspect-ratio: auto;
+  }
+
+  .l-work-slider {
+     min-height: 50vh;
+     aspect-ratio: auto;
+  }
+
+  .swiper--work  {
+    width: 50vw;
+    height: auto;
+  }
+
+  .swiper--default .swiper-slide {
     min-height: 50vh;
     aspect-ratio: auto;
   }

@@ -17,7 +17,7 @@ layout: layouts/post.njk
 ---
 
 
-<div class="l-work-content">
+<section class="l-work-content">
 
 
   <div id="work-content-intro" class="">
@@ -37,13 +37,12 @@ layout: layouts/post.njk
     <p>The campaign generated 42 million impressions and provoked a 12% increase in leukaemia enquiries via the NHS.</p>
   </div>
 
-
-<ol class="c-pagination mt-auto">
+  <ol class="c-pagination mt-auto">
     {% set prev = prevPost.url %}
     {% set next = nextPost.url %}
     {% if prev %}
     <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
-     {% else %}
+      {% else %}
     <li class=""></li>
     {% endif %}
     {% if next %}
@@ -53,19 +52,19 @@ layout: layouts/post.njk
     {% endif %}
   </ol>
 
-  </div>
-  
-  <div class="l-work-media" id="l-work-gallery">
-    <div class="l-work-imgs">
-      <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
-        <img src="{{ image_01 }}" alt="">
-      </a>
-      <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
-        <img src="{{ image_02 }}" alt="">
-      </a>
-    </div>
-    <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
-      <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
-      <img src="{{ image_03 }}" alt="image" />
+</section>
+
+<aside class="l-work-media" id="l-work-gallery">
+  <div class="l-work-imgs">
+    <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
+      <img src="{{ image_01 }}" alt="">
+    </a>
+    <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
+      <img src="{{ image_02 }}" alt="">
     </a>
   </div>
+  <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
+    <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
+    <img src="{{ image_03 }}" alt="image" />
+  </a>
+</aside>

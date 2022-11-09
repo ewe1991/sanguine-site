@@ -16,8 +16,7 @@ layout: layouts/post.njk
 ---
 
 
-<div class="l-work-content">
-
+<section class="l-work-content">
 
   <div id="work-content-intro" class="">
     <div class="max-w-text">
@@ -26,13 +25,12 @@ layout: layouts/post.njk
     </div>
   </div>
 
-
-<ol class="c-pagination mt-auto">
+  <ol class="c-pagination mt-auto">
     {% set prev = prevPost.url %}
     {% set next = nextPost.url %}
     {% if prev %}
     <li><a href="{{ prevPost.url }}" aria-label="View {{ prevPost.data.title }}">Prev</a></li>
-     {% else %}
+      {% else %}
     <li class=""></li>
     {% endif %}
     {% if next %}
@@ -41,18 +39,50 @@ layout: layouts/post.njk
     <li class=""></li>
     {% endif %}
   </ol>
-  </div>
+
+</section>
   
-  <div class="l-work-media" id="l-work-gallery">
-    <div class="l-work-imgs">
-      <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
-        <img src="{{ image_01 }}" alt="">
-      </a>
-      <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
-        <img src="{{ image_02 }}" alt="">
-      </a>
-    </div>
-    <a class="l-work-video glightbox" href="{{ image_03_xl }}" data-gallery="gallery">
-      <img src="{{ image_03 }}" alt="" />
+<aside class="l-work-media" id="l-work-gallery">
+
+  <div class="l-work-imgs">
+    <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
+      <img src="{{ image_01 }}" alt="">
+    </a>
+    <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
+      <img src="{{ image_02 }}" alt="">
     </a>
   </div>
+
+  <div class="l-work-slider relative bg-blue-500">
+    <!-- Slider main container -->
+    <div  class="swiper swiper--default swiper--work | js-swiper--default |">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->        
+        <div class="swiper-slide">
+          <img src="/img/work/nutri-within/slider/slide-02.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/img/work/nutri-within/slider/slide-03.jpg" alt="">        
+        </div>        
+        <div class="swiper-slide">          
+          <img src="/img/work/nutri-within/slider/slide-01.jpg" alt="">        
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev color-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+      </div>
+      <div class="swiper-button-next color-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+
+    </div>
+
+  </div>
+
+</aside>
+

@@ -42,10 +42,19 @@ body {
   color: #000000;
   -webkit-font-smoothing: antialiased;
 }
+
 /* .tmpl-work {
   background: black;
 } */
 
+.a11y-link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
 
 .sr-only {
 	border: 0 !important;
@@ -117,6 +126,11 @@ h5, .f-h5 {
 
 h6, .f-h6 {
   font-size: 1rem;
+}
+
+
+.f-body {
+  font-family: var(--font-family);
 }
 
 p {

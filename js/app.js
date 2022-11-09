@@ -52,6 +52,24 @@ const swiper = new Swiper('.js-swiper--default', {
   }
 
 } )();
+
+( function ()
+{
+  var profiles = document.getElementById( 'js-profiles' );
+
+  if ( profiles )
+  {
+    const lightbox = GLightbox( {
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+      width: "80vw",
+      height: "auto"
+    } );
+  }
+
+} )();
+
 ( function ()
 {
   var intro = document.getElementById( 'work-content-intro' );

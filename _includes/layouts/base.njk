@@ -27,18 +27,25 @@
   <body {% if templateClass %} class="{{ templateClass }}"{% endif %}>
     <header id="site-header" class="site-header">
 
-      <a href="{{ '/' | url }}" class="site-brand">
-      {% include "../sanguine_logo_colour.svg" %}
-      </a>
 
+        <a href="{{ '/' | url }}" class="relative z-8 site-brand" rel="home">
+        {% include "../sanguine_logo_colour.svg" %}
+        </a>
 
-
+        <button class="relative z-8 md.hidden" data-disclosure aria-controls="js-site-nav" aria-expanded="false" hidden aria-label="Toggle Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" >
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </button>
+      
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <nav>
-      {%- for entry in collections.all | eleventyNavigation %}
-        <a href="{{ entry.url | url }}" class="{% if entry.url == page.url %} nav-item-active{% endif %}">{{ entry.title }}</a>
-      {%- endfor %}
-      </nav>
+      <div id="js-site-nav" class="site-nav | md.block">
+        <nav class="flex flex-col | md.flex-row">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <a href="{{ entry.url | url }}" class="{% if entry.url == page.url %} nav-item-active{% endif %}">{{ entry.title }}</a>
+        {%- endfor %}
+        </nav>
+      </div>
 
     </header>
 

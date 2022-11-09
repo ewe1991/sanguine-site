@@ -254,6 +254,7 @@ a {
     background-color: hsl(0deg 0% 0% / 70%);    
     justify-content: center;
     flex-direction: column;
+    z-index: 5;
   }
 
   .site-nav.s-active {

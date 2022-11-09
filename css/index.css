@@ -263,9 +263,7 @@ a {
 }
 
 .site-header nav a.nav-item-active {
-  text-decoration:underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
+  font-weight: 600;
 }
 
 .s-nav--dark .site-header nav a {

@@ -335,6 +335,7 @@ a {
   fill: white !important;
 }
 
+@media (min-width: 1024px) {
 .s-nav--dark .site-header nav a {
   color: black;
 } 
@@ -348,6 +349,7 @@ a {
 
 .s-nav--light .site-header .c-btn-menu {
   color: white;
+}
 }
 
 @media screen and (min-width: 767px) {

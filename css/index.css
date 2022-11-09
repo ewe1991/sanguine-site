@@ -227,7 +227,6 @@ a {
 }
 
 .site-header {
-  color: white;
   display: flex;
   align-items: center;
   padding: 2vw;
@@ -236,6 +235,9 @@ a {
   justify-content: space-between;
 }
 
+.s-header--light .c-btn-menu {
+  color: white;
+}
 .s-header--light .site-header .site-brand svg path{
   fill: white;  
 }
@@ -304,6 +306,7 @@ a {
 
 @media (max-width: 1023px) {
   .site-header nav a {
+    color: white;
     font-size: clamp(1.5rem, 1.273rem + 1.14vw, 2rem);
   }
 }
@@ -312,13 +315,31 @@ a {
   font-weight: 600;
 }
 
+.s-menu-open .site-header nav a {
+  color: white !important;
+}
+.s-menu-open .site-header .c-btn-menu {
+  color: white !important;
+}
+
+.s-menu-open .site-header .site-brand svg path {
+  fill: white !important;
+}
+
 .s-nav--dark .site-header nav a {
   color: black;
 } 
+.s-nav--dark .site-header .c-btn-menu {
+  color: black;
+}
 
 .s-nav--light .site-header nav a {
   color: white;
 } 
+
+.s-nav--light .site-header .c-btn-menu {
+  color: white;
+}
 
 @media screen and (min-width: 767px) {
 

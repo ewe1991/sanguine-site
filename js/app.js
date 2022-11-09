@@ -239,10 +239,21 @@ document.addEventListener('click', function (event) {
 	// If the content is visible, hide it
 	// Otherwise, show it
 	if (event.target.getAttribute('aria-expanded') === 'true') {
+
+    if(event.target.classList.contains('c-btn-menu')) {
+      document.body.classList.remove('s-menu-open');
+    }
 		event.target.setAttribute('aria-expanded', false);
 		content.setAttribute('hidden', '');
     content.classList.remove('s-active');
+
+
 	} else {
+
+    if(event.target.classList.contains('c-btn-menu')) {
+      document.body.classList.add('s-menu-open');
+    }
+    
 		event.target.setAttribute('aria-expanded', true);
 		content.removeAttribute('hidden');
     content.classList.add('s-active');

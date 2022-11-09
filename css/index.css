@@ -42,6 +42,13 @@ body {
   line-height: 1.75;
   color: #000000;
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main';
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
 }
 
 /* .tmpl-work {

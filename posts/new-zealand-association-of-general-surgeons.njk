@@ -48,7 +48,11 @@ layout: layouts/post.njk
 
 </section>
   
-<aside class="l-work-media" id="l-work-gallery">
+<aside class="l-work-media" id="l-work-gallery">  
+  <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
+    <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
+    <img src="{{ image_03 }}" alt="image" />
+  </a>
   <div class="l-work-imgs l-work-imgs--stacked">
     <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
       <img src="{{ image_01 }}" alt="">
@@ -57,8 +61,4 @@ layout: layouts/post.njk
       <img src="{{ image_02 }}" alt="">
     </a>
   </div>
-  <a class="l-work-video glightbox" href="{{ video_03 }}" data-gallery="gallery" data-width="90vw" data-videosWidth="90vw">
-    <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
-    <img src="{{ image_03 }}" alt="image" />
-  </a>
 </aside>

@@ -53,12 +53,31 @@ layout: layouts/post.njk
     <svg fill="currentColor" class="l-work-video__play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 22v-20l18 10-18 10z"/></svg>
     <img src="{{ image_03 }}" alt="image" />
   </a>
-  <div class="l-work-imgs l-work-imgs--stacked">
-    <a href="{{ image_01_xl }}" class="glightbox" data-gallery="gallery">
-      <img src="{{ image_01 }}" alt="">
-    </a>
-    <a href="{{ image_02_xl }}" class="glightbox" data-gallery="gallery">
-      <img src="{{ image_02 }}" alt="">
-    </a>
+    <div class="l-work-slider relative">
+    <!-- Slider main container -->
+    <div  class="swiper swiper--default swiper--work | js-swiper--default |">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->        
+        <div class="swiper-slide">
+          <img src="/img/work/nzags/slider/slide-01.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/img/work/nzags/slider/slide-02.jpg" alt="">
+        </div>        
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev color-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+      </div>
+      <div class="swiper-button-next color-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+
+    </div>
+
   </div>
 </aside>

@@ -25,6 +25,7 @@ html {
   --swiper-navigation-size: 44px;
   --swiper-navigation-color: var(--swiper-theme-color);
   --site-header-height: 0px;
+  --gradi-brand: linear-gradient(90deg, rgba(170,0,28,1) 05%, rgba(176,9,25,1) 15%, rgba(194,34,17,1) 30%, rgba(222,75,4,1) 50%, rgba(233,91,0,1) 57%, rgba(255,155,0,1) 90%);
 }
 
 html {
@@ -438,6 +439,7 @@ a {
   min-width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .worklist-logo {
@@ -475,11 +477,19 @@ a {
 .worklist-link:hover:before {
   background-color: hsl(0deg 77% 37% / 5%);
 }
-@media screen and (min-width: 767px) {
-  .worklist-link {
-    /* align-items: flex-end; */
-  }
+
+.worklist-logo,
+.worklist-img {
+  transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+
+.worklist-link:hover .worklist-logo {
+  transform: scale(1.025);
+}
+.worklist-link:hover + .worklist-img {
+  transform: scale(1.025);
+}
+
 
 .worklist-link:before {
   content: '';

@@ -224,7 +224,7 @@ disclosures.forEach(function (disclosure) {
 
 });
 
-let siteNavTimeline;
+
 
 function menu() {
     const siteNavBtnOpen = document.getElementById('js-c-btn-menu__open');
@@ -232,18 +232,22 @@ function menu() {
   
     const siteNav = document.getElementById("js-site-nav");
     const navItems = document.querySelectorAll("#js-site-nav nav a");
-    let mql = window.matchMedia('(min-width: 1024px)');
+    let mql = window.matchMedia('(min-width: 1024px)');    
     let open = false;
-    
 
-    siteNavTimeline = new gsap.timeline({
+    let siteNavTimeline = gsap.timeline({
       paused: true,
-      onComplete: () => {
-        open = !open;        
+      onStart: () => {
+        document.body.classList.add('s-menu-open'); 
+        siteNavBtnOpen.setAttribute('hidden', '');
+        siteNavBtnClose.removeAttribute('hidden');
       },
-    }),
-  
-    siteNavTimeline.to(
+      onReverseComplete: () => {
+        document.body.classList.remove('s-menu-open');        
+        siteNavBtnOpen.removeAttribute('hidden');
+        siteNavBtnClose.setAttribute('hidden', '');
+      }
+    }).to(
       siteNav,
       1,
       {
@@ -270,33 +274,39 @@ function menu() {
     );
 
     siteNavBtnOpen.addEventListener('click', (event) => {
-      siteNavTimeline.play();
-
-      document.body.classList.add('s-menu-open'); 
-      siteNavBtnOpen.setAttribute('hidden', '');
-      siteNavBtnClose.removeAttribute('hidden');
+      siteNavTimeline.play();      
+      open = !open;
     });
 
     siteNavBtnClose.addEventListener('click', (event) => {    
       siteNavTimeline.timeScale(1.25);
       siteNavTimeline.reverse();
 
+      open = !open;
+
+    });
+
+
+  mql.addEventListener('change', event => {
+    if (event.matches) {
+      console.log(event.matches)      
+
+      gsap.set(navItems, {x: -30, autoAlpha: 0})            
+
+    } else {          
+
+      gsap.set(siteNav, {clearProps: true})
+      gsap.set(navItems, {clearProps: true})
+
       document.body.classList.remove('s-menu-open');        
       siteNavBtnOpen.removeAttribute('hidden');
       siteNavBtnClose.setAttribute('hidden', '');
 
-    });
-
-  mql.addEventListener('change', event => {
-    if (event.matches) {
-      gsap.set(siteNav, {clearProps: true})
-      gsap.set(navItems, {clearProps: true})
-    } else {
-      gsap.set(navItems, {x: -30, autoAlpha: 0})
+    
+      
     }
   })    
-    
-
+  
 }
 menu();
 

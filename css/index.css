@@ -284,6 +284,12 @@ a {
   .site-nav {
     display: block;
   }
+
+  .site-nav nav a {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(0, 0) !important;
+  }
 }
 
 .site-brand {

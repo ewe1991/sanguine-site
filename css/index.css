@@ -787,11 +787,13 @@ a {
   transition: .5s all;
   opacity: 0;
   mix-blend-mode: color;
+  filter: brightness(100%);
 }
 
 .c-profile:hover .c-profile__img-wrap:before,
 .c-profile:focus .c-profile__img-wrap:before  {
   opacity: 1;
+  filter: brightness(140%);
 }
 
 

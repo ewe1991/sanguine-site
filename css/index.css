@@ -755,3 +755,13 @@ a {
   max-width: 90vw !important;
   margin: 0 auto;
 }
+
+
+/* Profiles */
+
+.c-profile__img {
+  transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.c-profile__link:focus-within ~ .c-profile__img {  
+  transform: scale(1.05);
+} 

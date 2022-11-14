@@ -15,10 +15,12 @@ eleventyNavigation:
 
       <ul id="js-profiles" class="grid grid-cols-1 gap-32 | sm.grid-cols-2 sm.gap-40 | lg.grid-cols-4" style="padding: clamp(1rem, 2vw, 2rem);">
         <li> 
-          <figure class="relative">
-            <img src="/img/team/raphael_stone.jpg" alt="">
+          <figure class="c-profile relative">
+            <div class="overflow">
+            <img class="c-profile__img" src="/img/team/raphael_stone.jpg" alt="">
+            </div>
             <figcaption class="text-md uppercase tracking-loose leading-120 text-center mt-32">
-                <a href="#profile-01" class="glightbox a11y-link" data-gallery="profiles">
+                <a href="#profile-01" class="c-profile__link glightbox a11y-link" data-gallery="profiles">
                   <span class="bold">Raphael Stone</span>
                   <br>
                   <span class="light">CO-FOUNDER</span>
@@ -27,10 +29,12 @@ eleventyNavigation:
           </figure>
         </li>
         <li> 
-          <figure class="relative">
-            <img src="/img/team/nick_houghton.jpg" alt="">
+          <figure class="c-profile relative">
+            <div class="overflow">
+            <img class="c-profile__img" src="/img/team/nick_houghton.jpg" alt="">
+            </div>
             <figcaption class="text-md uppercase tracking-loose leading-120 text-center mt-32">
-                <a href="#profile-02" class="glightbox a11y-link" data-gallery="profiles">
+                <a href="#profile-02" class="c-profile__link glightbox a11y-link" data-gallery="profiles">
                 <span class="bold">Nick Houghton</span>
                 <br>
                 <span class="light">CO-FOUNDER</span>
@@ -39,10 +43,12 @@ eleventyNavigation:
           </figure>
         </li>
         <li> 
-          <figure class="relative">
-            <img src="/img/team/laura_weston.jpg" alt="">
+          <figure class="c-profile relative">
+            <div class="overflow">
+            <img class="c-profile__img" src="/img/team/laura_weston.jpg" alt="">
+            </div>
             <figcaption class="text-md uppercase tracking-loose leading-120 text-center mt-32">
-              <a href="#profile-03" class="glightbox a11y-link" data-gallery="profiles">
+              <a href="#profile-03" class="c-profile__link glightbox a11y-link" data-gallery="profiles">
               <span class="bold">Laura Weston</span>
               <br>
               <span class="light">Behaviour Specialist<br>- Qualitative</span>
@@ -51,10 +57,12 @@ eleventyNavigation:
           </figure>
         </li>
         <li> 
-          <figure class="relative">
-            <img src="/img/team/victoria_ulph.jpg" alt="">
+          <figure class="c-profile relative">
+            <div class="overflow">
+            <img class="c-profile__img" src="/img/team/victoria_ulph.jpg" alt="">
+            </div>
             <figcaption class="text-md uppercase tracking-loose leading-120 text-center mt-32">
-               <a href="#profile-04" class="glightbox a11y-link" data-gallery="profiles">
+               <a href="#profile-04" class="c-profile__link glightbox a11y-link" data-gallery="profiles">
               <span class="bold">Victoria Ulph</span>
               <br>
               <span class="light">Consumer Behaviour Specialist<br>- Qualitative</span>
@@ -69,11 +77,11 @@ eleventyNavigation:
 <div id="profile-01" style="display: none;">
   <div class="inline-inner" style="padding:clamp(1rem, 2vw, 2rem);">
    
-    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32">
+    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32 | md.gap-48">
       <div class="max-w-512">
         <img src="/img/team/raphael_stone.jpg" alt="" loading="lazy">
       </div>
-      <div class="max-w-text">
+      <div class="max-w-text flex flex-col">
         <h2 class="f-body uppercase tracking-loose leading-120 mt-32 text-lg | md.text-xl md.leading-120">
           <span class="bold">Raphael Stone</span>
           <br>
@@ -81,6 +89,12 @@ eleventyNavigation:
         </h2>
         <p>Raphael Stone has a track record of developing award-winning campaigns alongside leading advertising agencies in London, New York, and Berlin. He has conceived and directed campaigns that have contributed to the success of the world’s most revered brands. His interactive campaign for Vice provoked a record youth-voter turnout in New Zealand’s general elections. His integrated global Christmas campaign for PayPal added 16 million new customers in a single quarter.  For Swiss-American pharmaceutical giant, Roche, he developed a multi-million dollar pitch-winning campaign.</p>
         <p>Raphael brings his vast experience concieving campaigns for global megabrands to the healthcare sectors, enabling biotechs, pharmaceuticals and healthcare charities to advertise as effectively, creatively and memorably as the likes of Apple and Nike. </p>
+
+        <a class="flex flex-row align-items-center gap-8 mt-auto" href="mailto:raphael@sanguineagency.com"> 
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" class="feather feather-mail w-24 h-24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>    
+          <span>raphael@sanguineagency.com</span>
+        </a>
+
       </div>
     </div>
         
@@ -91,11 +105,11 @@ eleventyNavigation:
 <div id="profile-02" style="display: none;">
   <div class="inline-inner" style="padding:clamp(1rem, 2vw, 2rem);">
    
-    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32">
+    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32 | md.gap-48">
       <div class="max-w-512">
         <img src="/img/team/nick_houghton.jpg" alt="" loading="lazy">
       </div>
-      <div class="max-w-text">
+      <div class="max-w-text flex flex-col">
         <h2 class="f-body uppercase tracking-loose leading-120 mt-32 text-lg | md.text-xl md.leading-120">
               <span class="bold">Nick Houghton</span>
               <br>
@@ -103,6 +117,12 @@ eleventyNavigation:
         </h2>
         <p>Nicholas Houghton has a track record of developing award-winning campaigns alongside leading advertising agencies in London, New York, and Berlin. He has conceived and directed campaigns that have contributed to the success of the world’s most revered brands. His interactive campaign for Vice provoked a record youth-voter turnout in New Zealand’s general elections. His integrated global Christmas campaign for PayPal added 16 million new customers in a single quarter.  For Swiss-American pharmaceutical giant, Roche, he developed a multi-million dollar pitch-winning campaign.</p>
         <p>Nicholas brings his vast experience concieving campaigns for global megabrands to the healthcare sectors, enabling biotechs, pharmaceuticals and healthcare charities to advertise as effectively, creatively and memorably as the likes of Apple and Nike. </p>
+        
+        <a class="flex flex-row align-items-center gap-8 mt-auto" href="mailto:nick@sanguineagency.com"> 
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" class="feather feather-mail w-24 h-24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>    
+          nick@sanguineagency.com
+        </a>
+        
       </div>
     </div>
         
@@ -112,17 +132,23 @@ eleventyNavigation:
 <div id="profile-03" style="display: none;">
   <div class="inline-inner" style="padding:clamp(1rem, 2vw, 2rem);">
    
-    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32">
+    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32 | md.gap-48">
       <div class="max-w-512">
         <img src="/img/team/laura_weston.jpg" alt="" loading="lazy">
       </div>
-      <div class="max-w-text">
+      <div class="max-w-text flex flex-col">
         <h2 class="f-body uppercase tracking-loose leading-120 mt-32 text-lg | md.text-xl md.leading-120">
           <span class="bold">Laura Weston</span>
           <br>
-          <span class="light">Behaviour Specialist<br>- Qualitative</span>
+          <span class="light">Consumer Behaviour Specialist<br>- Quantitative</span>
         </h2>
-        <p>Victoria is a qualitative researcher with over a decade of agency-side experience. She specialises in turning human behavioral insight into brand opportunity and growth. She has done this for both the private sector and highly regulated public sector. Victoria is well versed in producing high quality and high profile research held up to scrutiny by industry regulators.</p>
+        <p>Laura is a mixed-method researcher with a passion for numbers and data. She started her career in health policy research using gold standard survey methodology working for government departments and other public sector agencies. Keen to move from reporting data to turning research into actionable insights she moved into the world of media. As an in-house specialist at Manning Gottlieb OMD she honed her skills in applied behavioral science and understanding people through a blend of data, science and data science.</p>        
+
+        <a class="flex flex-row align-items-center gap-8 mt-auto" href="mailto:laura@sanguineagency.com"> 
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" class="feather feather-mail w-24 h-24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>    
+          laura@sanguineagency.com
+        </a>
+
       </div>
     </div>
         
@@ -132,17 +158,24 @@ eleventyNavigation:
 <div id="profile-04"  style="display: none;">
   <div class="inline-inner" style="padding:clamp(1rem, 2vw, 2rem);">
    
-    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32">
+    <div class="flex flex-col | sm.grid sm.grid-cols-2 sm.gap-32 | md.gap-48">
       <div class="max-w-512">
         <img src="/img/team/victoria_ulph.jpg" alt="" loading="lazy">
       </div>
-      <div class="max-w-text">
+      <div class="max-w-text flex flex-col">
         <h2 class="f-body uppercase tracking-loose leading-120 mt-32 text-lg | md.text-xl md.leading-120">
               <span class="bold">Victoria Ulph</span>
               <br>
               <span class="light">Consumer Behaviour Specialist<br>- Qualitative</span>
         </h2>
-        <p>Laura is a mixed-method researcher with a passion for numbers and data. She started her career in health policy research using gold standard survey methodology working for government departments and other public sector agencies. Keen to move from reporting data to turning research into actionable insights she moved into the world of media. As an in-house specialist at Manning Gottlieb OMD she honed her skills in applied behavioral science and understanding people through a blend of data, science and data science.</p>
+
+        <p>Victoria is a qualitative researcher with over a decade of agency-side experience. She specialises in turning human behavioral insight into brand opportunity and growth. She has done this for both the private sector and highly regulated public sector. Victoria is well versed in producing high quality and high profile research held up to scrutiny by industry regulators.</p>        
+
+        <a class="flex flex-row align-items-center gap-8 mt-auto" href="mailto:victoria@sanguineagency.com"> 
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" class="feather feather-mail w-24 h-24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>    
+          victoria@sanguineagency.com
+        </a>
+
       </div>
     </div>
         

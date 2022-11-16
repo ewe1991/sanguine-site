@@ -64,7 +64,7 @@ const swiper = new Swiper('.js-swiper--default', {
     const lightbox = GLightbox( {
       touchNavigation: true,
       loop: true,
-      width: "75vw",
+      width: "85vw",
       autoplayVideos: true,      
       height: "auto"
     } );
